@@ -15,22 +15,36 @@ body {
 }
 
 main {
-    max-width: 640px;
+    display: grid;
+    grid-template-columns: 60px 480px 180px;
+    gap: 2rem;
+    max-width: 960px;
     width: 100%;
 }
 
-h1 {
-    margin: 0 0 1.5rem 0;
-    font-size: 2.4rem;
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    color: #ffffff;
+.logo {
+    width: 64px;
+    height: auto;
+    display: block;
+}
+
+.content {
+    min-width: 0;
 }
 
 p {
     margin: 0 0 1.2rem 0;
     font-size: 1rem;
     color: #b6bcc8;
+}
+
+.lead {
+    color: #d7dae0;
+}
+
+.contact {
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 a {
@@ -40,4 +54,19 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .logo {
+        width: 48px;
+    }
+
+    .contact {
+        white-space: normal;
+    }
 }
